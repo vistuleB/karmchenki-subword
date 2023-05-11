@@ -1,0 +1,71 @@
+{
+	"name": "karmchenki-subword",
+	"displayName": "Karmchenki Subword",
+	"publisher": "Karmchenki",
+	"license": "MIT",
+	"description": "granular & predicable subwords",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.46.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"*"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "karmchenki-subword.moveSubwordLeftNoExtend",
+				"title": "Move Subword Left No Extend"
+			},
+			{
+				"command": "karmchenki-subword.moveSubwordRightNoExtend",
+				"title": "Move Subword Right No Extend"
+			},
+			{
+				"command": "karmchenki-subword.moveSubwordLeftExtend",
+				"title": "Move Subword Left Extend"
+			},
+			{
+				"command": "karmchenki-subword.moveSubwordRightExtend",
+				"title": "Move Subword Right Extend"
+			},
+			{
+				"command": "karmchenki-subword.deleteSubwordLeft",
+				"title": "Delete Subword Left"
+			},
+			{
+				"command": "karmchenki-subword.deleteSubwordRight",
+				"title": "Delete Subword Right"
+			},
+			{
+				"command": "karmchenki-subword.dropSelections",
+				"title": "Drop Selections"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "yarn run compile",
+		"compile": "tsc -p ./",
+		"lint": "eslint src --ext ts",
+		"watch": "tsc -watch -p ./",
+		"pretest": "yarn run compile && yarn run lint",
+		"test": "node ./out/test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.46.0",
+		"@types/glob": "^7.1.1",
+		"@types/mocha": "^7.0.2",
+		"@types/node": "^13.11.0",
+		"eslint": "^6.8.0",
+		"@typescript-eslint/parser": "^2.26.0",
+		"@typescript-eslint/eslint-plugin": "^2.26.0",
+		"glob": "^7.1.6",
+		"mocha": "^7.1.1",
+		"typescript": "^3.8.3",
+		"vscode-test": "^1.3.0"
+	}
+}
