@@ -2,17 +2,18 @@
 	"name": "karmchenki-subword",
 	"displayName": "Karmchenki Subword",
 	"publisher": "Karmchenki",
+	"repository": "https://github.com/vistuleB/karmchenki-subword.git",
 	"license": "MIT",
 	"description": "granular & predicable subwords",
 	"version": "0.0.1",
 	"engines": {
-		"vscode": "^1.46.0"
+		"vscode": "^1.78.0"
 	},
 	"categories": [
 		"Other"
 	],
 	"activationEvents": [
-		"*"
+		"onStartupFinished"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
